@@ -10,18 +10,19 @@
     <form>
 
         <label> Enter First Name</label>
-        <input type="text" name="firstName" placeholder=" First Name " required minlength="2" maxlength="16">
+        <input type="text" autocomplete="off" name="firstName" placeholder=" First Name " required minlength="2"
+            maxlength="16">
         <br>
         <br>
 
         <label><b> Enter last name</b></label>
-        <input type="text" name="lastName" placeholder=" last Name " required>
+        <input type="text" autocomplete="off" name="lastName" placeholder=" last Name " required>
         <br>
         <br>
         <!-- age -->
         <div>
             <label> Enter age</label>
-            <input type="number" name="age" min="0" max="106">
+            <input type="number" autocomplete="off" name="age" min="0" max="106">
 
 
         </div>
@@ -76,6 +77,13 @@
             <textarea name="address" cols="30" rows="5"></textarea>
         </div>
         <!-- shortcut for comment tag  ctrl+/ -->
+        <div>
+            <!-- audio and VIDEO  -->
+            <audio src=""> </audio>
+            <video src=""> </video>
+
+
+        </div>
         <div>
             <label> Select File/resume</label>
             <input type="file" name="uploadFile">

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cascading</title>
+    <!-- syntax of css
+selector{
+    property :value;
+} -->
+    <!-- internal css -->
+    <style>
+        h1,
+        h2 {
+            color: darkorchid;
+            font-size: 100px;
+            text-transform: uppercase;
+        }
+
+        .classSelector {
+            color: blue;
+            font-size: 100px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-decoration: line-through;
+        }
+        .Bagalkot{
+            color: darkgoldenrod;
+            font-size: 100px;
+
+        }
+
+        #header {
+            color: chartreuse;
+            font-size: 100px;
+        }
+    </style>
+    <!-- different selectors 
+    1.element selector
+    2.grouping selector .000022
+    3.Class selector
+    4.id selector  
+            -->
+</head>
+
+<body>
+
+    <h1>Cascading StyleSheet</h1>
+    <h2>another attempt</h2>
+    <h1 class="classSelector"> to do colour change</h1>
+    <h3 id="header"> id selector</h3>
+
+    <h1 class="Bagalkot"> changing colour</h1>
+    <h1 class="Bagalkot"> colour change 2</h1>
+
+</body>
+
+</html>
