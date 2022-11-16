@@ -1,0 +1,51 @@
+ h1,
+h2 {
+    color: darkorchid;
+    font-size: 100px;
+    text-transform: uppercase;
+}
+
+.classSelector {
+    color: blue;
+    font-size: 100px;
+ }
+
+#header {
+    color: chartreuse;
+    font-size: 100px;
+}
+
+.rect1 {
+    border: 2px solid red;
+    width: 400px;
+    height: 200px;
+    background-color: aliceblue;
+
+}
+
+.rect2{
+
+    border: 2px dashed blue;
+    width: 200px;
+    height: 100px;
+    margin: 60px;
+    background-color: lawngreen;
+
+}
+.rect3{
+    border: 2px solid red;
+    width: 400px;
+    height: 200px;
+    display: inline-block;
+}
+.rect4 {
+    border: 2px solid red;
+    width: 400px;
+    height: 200px;
+    display: inline-block;
+}
+body {
+    background-image: url(ferrari.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

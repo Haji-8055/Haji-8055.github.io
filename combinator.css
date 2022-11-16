@@ -1,0 +1,108 @@
+/* Descendant selector */
+div p {
+    color: green;
+
+}
+
+/* child selector */
+div>p {
+    color: red;
+}
+
+/*adjacent sibling selector --->applies only to ,,next to div then tag */
+div+p {
+    color: blueviolet;
+}
+
+/* general sibling selector */
+
+div~P {
+    color: rgb(12, 55, 75);
+}
+
+.static {
+
+    position: static;
+    left: 100px;
+}
+
+.relative {
+    color: blueviolet;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    top: 80px;
+}
+
+.absolute {
+    position: absolute;
+    bottom: 0;
+}
+
+.topleft {
+    position: absolute;
+    color: red;
+    left: 50px;
+}
+
+.imageparent {
+    position: relative;
+}
+
+img {
+    border-radius: 50%;
+    left: 300px;
+    width: 50%;
+}
+
+.a {
+    position: absolute;
+    left: 40px;
+    top: 200px;
+    color: red;
+
+}
+
+.b {
+    position: absolute;
+    left: 450px;
+    top: 200px;
+    color: red;
+
+}
+
+.c {
+    position: absolute;
+    left: 450px;
+    top: 100px;
+    color: red;
+
+}
+
+.d {
+    position: absolute;
+    left: 50px;
+    top: 100px;
+    color: red;
+
+}
+
+.e {
+    position: absolute;
+    left: 250px;
+    top: 260px;
+    color: red;
+
+}
+
+body {
+    margin: 100px;
+    background-color: cornsilk;
+}
+
+.fixed{
+    position: fixed;
+    top: 0;
+    right: 50px;
+    background-color: blueviolet;
+}
