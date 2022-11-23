@@ -106,3 +106,16 @@ body {
     right: 50px;
     background-color: blueviolet;
 }
+
+        body {
+            background-color: pink;
+            background-image: url() ;
+        }
+
+        @media screen and (min-width:480px) {
+            body {
+                background-color:aqua;
+
+            }
+        }
+    
