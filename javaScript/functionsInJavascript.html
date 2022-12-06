@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        console.log("Executing function in javascript before declaring it")
+
+        display()
+
+        function display() {
+            console.log("Executing function in javascript")
+
+        }
+
+        /* display()
+ 
+         function display() {
+             console.log("Executing function in javascript")
+             display()
+ 
+             ------error-----
+             ncaught RangeError: Maximum call stack size exceeded
+     at display (functionsInJavascript.html:23:13)
+     at display (functionsInJavascript.html:24:13)
+     at display (functionsInJavascript.html:24:13)
+     at display (functionsInJavascript.html:24:13)
+     at display (functionsInJavascript.html:24:13)
+     at display (functionsInJavascript.html:24:13)
+     at display (functionsInJavascript.html:24:13)
+     at display (functionsInJavascript.html:24:13)
+     at display (functionsInJavascript.html:24:13)
+     at display (functionsInJavascript.html:24:13)
+ 
+ 
+ 
+         }*/
+
+
+        console.log("Executing function in javascript after declaring it") //pritns on inspect
+
+        display()
+
+        document.write("Introduction to javascript  <br>")
+        document.write(" Introduction to javascript <br>") // to print statement on html web page
+        document.write(" Introduction to javascript <br>")
+
+
+        document.write("<h1>Introduction to javascript</h1>")
+        document.write("<h2>Introduction to javascript</h2> uygsikugiksb")
+        document.write("<h3>Introduction to javascript</h3>")
+        document.write("<h4>Introduction to javascript</h4>")
+        document.write("<h5>Introduction to javascript</h5>")
+        document.write("<h6>Introduction to javascript</h6>")
+        document.write("<h7>Introduction to javascript</h7> <br>")
+
+        // javascript popup box
+        alert("calling print statement")
+        confirm("do u want to continue")
+
+        var result = confirm("do u want to continue")
+        console.log(result);
+
+        var result = prompt("your name")
+        document.write("<h1>", result, "<br> </h1>")
+
+        if (result == "Haji") {
+            document.write(result)
+
+
+        } else {
+            document.write("javascript")
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
