@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function validate() {
+            let firstname = document.getElementById("firstname")
+            console.log(firstname.value)
+            console.log(firstname.value.length)
+            let error = document.getElementById("error")
+
+            let password = document.getElementById("password")
+
+            if (firstname.value == "") {
+                console.log("please enter firstname")
+                error.innerHTML = "please enter firstname"
+                error.style.color = 'red'
+            }
+
+            if (password.value.length <= 4) {
+                console.log("password length should be more than 4");
+                passError.innerHTML = "password length should be more than 4"
+                passError.style.color = 'red'
+            }
+
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <div>
+            <label>enter first name</label>
+            <input type="text" placeholder="firstname" name="firstname" id="firstname">
+            <div id="error"></div>
+
+
+            <label>enter password</label>
+            <input type="number" placeholder="password" name="password" id="password">
+            <div id="passError"></div>
+        </div>
+        <button onclick="validate()" type="button"> Register</button>
+
+
+    </form>
+
+</body>
+
+</html>

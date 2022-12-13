@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class try</title>
+    <script>
+
+        function displayData() {
+
+            console.log("calling displayData")
+            let message = document.getElementById("message")
+            console.log(message);
+            message.innerHTML = "<h1>calling displayData</h1>"
+            message.style.color = "Green"
+
+            let player1 = document.getElementById("player1")
+            player1.innerHTML = "Rohit sharma"
+
+        }
+
+
+        function details() {
+
+            let name = document.getElementById("name")
+            console.log(name);
+            console.log(name.value);
+            let detail = document.getElementById("detail")
+            detail.innerHTML = name.value
+        }
+
+        
+
+    </script>
+</head>
+
+<body>
+    <div id="message"></div>
+    <button onclick="displayData()">click here</button>
+    <br>
+    <br>
+
+
+
+    <form>
+        <div>
+            <label> Enter name</label>
+            <input type="text" id="name">
+        </div>
+        <button onmouseover="details()"> submit </button>
+        <div id="detail"></div>
+    </form>
+   
+
+</body>
+
+</html>

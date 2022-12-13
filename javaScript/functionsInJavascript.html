@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 
-    <script>
-
+    <script>    
+//
         console.log("Executing function in javascript before declaring it")
-
+        //creating function in javascript , display is name of function
         display()
 
         function display() {
             console.log("Executing function in javascript")
+            document.write("Executing function in javascript <br>")
+
 
         }
 
@@ -23,7 +26,7 @@
              console.log("Executing function in javascript")
              display()
  
-             ------error-----
+             ------ error-----
              ncaught RangeError: Maximum call stack size exceeded
      at display (functionsInJavascript.html:23:13)
      at display (functionsInJavascript.html:24:13)
@@ -41,45 +44,96 @@
          }*/
 
 
-        console.log("Executing function in javascript after declaring it") //pritns on inspect
+        console.log("Executing function in javascript after declaring it ") //prints on console ,to see--> inspect
 
-        display()
+        document.write("calling function <br>")
+        display()//calling function
 
-        document.write("Introduction to javascript  <br>")
+
         document.write(" Introduction to javascript <br>") // to print statement on html web page
-        document.write(" Introduction to javascript <br>")
 
 
         document.write("<h1>Introduction to javascript</h1>")
-        document.write("<h2>Introduction to javascript</h2> uygsikugiksb")
+        document.write("<h2>Introduction to javascript</h2>")
         document.write("<h3>Introduction to javascript</h3>")
         document.write("<h4>Introduction to javascript</h4>")
         document.write("<h5>Introduction to javascript</h5>")
         document.write("<h6>Introduction to javascript</h6>")
-        document.write("<h7>Introduction to javascript</h7> <br>")
+        document.write('<h7>Introduction to javascript</h7> <br>')
 
         // javascript popup box
         alert("calling print statement")
-        confirm("do u want to continue")
+        // confirm("do u want to continue")
 
         var result = confirm("do u want to continue")
         console.log(result);
 
         var result = prompt("your name")
-        document.write("<h1>", result, "<br> </h1>")
+        //  document.write("<h1>", result," <br> </h1>")
 
         if (result == "Haji") {
-            document.write(result)
+            document.write(result, "<br>")
 
 
         } else {
-            document.write("javascript")
+            document.write("javascript <br>")
         }
+
+
+
+
+        function add(a, b) {
+            document.write(a + b, "<br>")
+        }
+        add(10, 20)
+
+
+
+   
+        function sub(a, b) {
+            return a - b
+        }
+
+        let res = sub(10, 2)
+        console.log(res);
+        document.write(res, "<br>")
+
+        const pi = 3.142
+        document.write(pi,"<br>")
+
+
+        function starPattern(){
+
+
+        for (let i = 0; i < 10; i++) {
+            for (let j = 0; j <=i; j++) {
+                document.write("*")
+            }
+            document.write("<br>")
+
+
+        }
+        
+
+        document.write("<br>")
+
+        for (let i = 10; i >=0; i--) {
+
+            for (let j = i; j >=0; j--) {
+                document.write("*")
+            }
+            document.write("<br>")
+        }
+        }
+
 
     </script>
 </head>
 
 <body>
+
+   <button onclick="starPattern()">print stars</button>      <!--event handling -->
+    <button onmouseover="starPattern()">(on mouse over)print stars</button>
 
 </body>
 
