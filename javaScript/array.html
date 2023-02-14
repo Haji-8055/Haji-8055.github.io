@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+
+    <script>
+
+        let arr = []//declaration
+        arr = [1, 2, 3]//initialization
+        console.log(arr);
+
+        for (let index = 0; index < arr.length; index++) {
+            console.log(arr[index]);
+        }
+
+        console.log("=========another array========");
+        //declaring and initializing
+        let arr1 = [true, false]
+        console.log(arr1)
+
+        console.log("=========another array========");
+        let arr2 = [1, true, "javascript", 10.20] // js array can have multiple datatypes in single array
+        for (let index = 0; index < arr2.length; index++) {
+            console.log(arr2[index]);
+
+        }
+        console.log("=========array3========");
+        let arr3 = []
+        arr3.push(1)  //adds element next to previous
+        console.log(arr3);
+
+        arr3.push(2)
+        console.log(arr3);
+
+        arr3.push(3)
+        console.log(arr3);
+
+        arr3.pop() // remove element at last
+        console.log(arr3);
+        for (let index = 0; index < arr3.length; index++) {
+            console.log(arr3[index]);
+
+        }
+
+
+        arr3.unshift(5)// adds at begining
+        console.log(arr3);
+
+        arr3.unshift(5)
+        console.log(arr3);
+
+        console.log("using splice");
+
+        arr3.splice(2, 1)//2--> indicates index number,,1--> indicates how many elements to be removed after that index
+        console.log(arr3);
+
+        arr3.shift()
+        console.log(arr3);
+
+
+
+        let tree = {
+            'name': 'banayan',
+            'lifespan': 500
+        }
+
+        let trees = []
+        trees.push(tree)
+
+        let tree1 = {
+            'name': 'coconut',
+            'lifespan': 100
+        }
+
+        trees.push(tree1)
+        console.log(trees);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

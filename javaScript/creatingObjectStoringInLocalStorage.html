@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+    function validate() {
+        let firstName = document.getElementById("firstname")
+        console.log(firstname.value)
+        console.log(firstname.value.length)
+
+        let error = document.getElementById("error")
+
+        let password = document.getElementById("password")
+
+
+        if (firstname.value == "") {
+            console.log("please enter firstname")
+            error.innerHTML = "please enter firstname"
+            error.style.color = 'red'
+        }
+
+
+
+        let passError = document.getElementById("passError")
+
+        if (password.value.length == 0) {
+            console.log("plz enter password");
+            passError.innerHTML = "plz enter password"
+            passError.style.color = 'red'
+        }
+
+        else if (password.value.length <= 4) {
+            console.log("password length should be more than 4");
+            passError.innerHTML = "password length should be more than 4"
+            passError.style.color = 'red'
+        }
+
+
+
+        console.log(document.registration.gender);
+        console.log(document.registration.gender[0]);
+        console.log(document.registration.gender[0].checked);
+        console.log(document.registration.gender[1].checked);
+        console.log(document.registration.gender[2].checked);
+        if (document.registration.gender[0].checked == false
+            && document.registration.gender[1].checked == false
+            && document.registration.gender[2].checked == false) {
+            let gend = document.getElementById("genderError")
+            gend.innerHTML = "--le gender select maado"
+            gend.style.color = "red"
+        }
+
+        console.log(document.registration.city);
+        let city = document.registration.city
+        if (city.value == 0) {
+            console.log("please select city");
+            let cityMessage = document.getElementById("cityMessage")
+            cityMessage.innerHTML = "please select city"
+            cityMessage.style.color = "red"
+        }
+
+
+
+        let registrationObject = {////////////////////object
+            'firstName':firstName.value, 
+            'password':password.value
+        }
+        console.log(registrationObject)
+        console.log(JSON.stringify(registrationObject));
+        let registrationString=JSON.stringify(registrationObject)
+
+        localStorage.setItem("noncsr",registrationString)
+
+
+    }
+</script>
+</head>
+
+<body>
+<form name="registration">
+    <div>
+        <label>enter first name</label>
+        <input type="text" placeholder="firstname" name="firstname" id="firstname">
+        <div id="error"></div>
+
+
+        <label>enter password</label>
+        <input type="number" placeholder="password" name="password" id="password">
+        <div id="passError"></div>
+    </div>
+    <button onclick="validate()" type="button"> Register</button>
+
+    <div>
+        <label>Select Gender</label>
+        <input type="radio" name="gender">male
+        <input type="radio" name="gender">female
+        <input type="radio" name="gender">others
+        <span id="genderError"></span>
+
+    </div>
+
+    <div>
+        <label>Select city</label>
+
+        <select name="city">
+            <option value="0">Select city</option>
+            <option> bgk</option>
+            <option>Blr</option>
+        </select>
+        <span id="cityMessage"></span>
+
+    </div>
+</form>
+</html>

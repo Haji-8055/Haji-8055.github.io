@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tabelCRUD</title>
+
+    <script>
+
+        var id = 0;
+
+        data=[]
+
+        function deleteFunction() {
+
+            let arr = document.getElementsByTagName("input");
+            console.log(arr);
+            for (let i = 0; index < arr.length; i++) {
+                const element = arr[i];
+                console.log(element.value);
+                element.value = "";
+
+            }
+
+        }
+
+        function createRow() {
+            let row = document.createElement('tr')
+            row.innerHTML = `<td></td>
+                <td> </td>
+                <td></td>
+                <td></td>`
+                ap
+
+        }
+
+        function displayDetails() {
+
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phoneNo = document.getElementById("phone").value;
+
+            if (name == "" || email == "" || phoneNo == 0) {
+                alert("all fields are required")
+            }
+
+            if (email.length <= 8 || email.length >= 18) {
+                let msg1 = document.getElementById("msg")
+                msg1.innerHTML = "*email should be greater than 8 and less than 18"
+                msg1.style.color = "red"
+            }
+            id = id + 1;
+            document.getElementById("dataId").innerHTML = id;
+            document.getElementById("dataName").innerHTML = name;
+            document.getElementById("dataEmail").innerHTML = email;
+            document.getElementById("dataPhoneNo").innerHTML = phoneNo;
+
+            deleteFunction();
+        }
+    </script>
+</head>
+
+
+<body>
+
+    <div>
+        <h1>Employee Details</h1>
+        <p>Enter Name:</p><input type="text" placeholder="Name" id="name">
+        <p>Email:</p><input type="email" placeholder="email" id="email">
+        <span id="msg"> </span>
+        <p> Phone No</p><input type="number" placeholder="Phone No" id="phone">
+        <p><button onclick="displayDetails()" type="button">Submit</button></p>
+    </div>
+
+    <div>
+        <h2>Employee Details</h2>
+        <table id="tbl" border="2" style="width: 50%;">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone No</th>
+            </tr>
+
+            <tr>
+
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

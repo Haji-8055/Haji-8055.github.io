@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link href="css/style.css" rel="stylesheet"> -->
+    <script>
+        id = 0;
+        data = [];
+        function clearFeilds() {
+            const i = document.getElementsByTagName("input");
+            for (const input of i)
+                input.value = "";
+        }
+        
+        function createRow(detail) {
+            let row = document.createElement("tr");
+            row.innerHTML = `<td>${detail[0]}</td>
+                            <td>${detail[1]}</td>
+                            <td>${detail[2]}</td>
+                            <td>${detail[3]}</td>`;
+            return row;
+
+        }
+        
+        function display() {
+            table = document.getElementById("tbl");
+            table.innerHTML = "";
+            table.innerHTML = ` <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone No</th>
+            </tr>`;
+            for (const detail of data) {
+                let row = createRow(detail);
+                table.appendChild(row);
+            }
+        }
+
+        function onSubmit() {
+            const name = document.getElementById("Name").value;
+            const email = document.getElementById("Email").value;
+            const phone = document.getElementById("Phone").value;
+            if (name == "" || email == "" || phone == "") {
+                alert("All feilds* required");
+                return
+            }
+
+            if(name.length<=3||name.length>=18)
+            {
+               let nameMsg= document.getElementById("nameMsg")
+               nameMsg.innerHTML="name length should be greater than 3 and less than 18"
+               nameMsg.style.color="red"
+            } 
+            else if (email.length<=8||email.length>=25){
+                let emailMsg= document.getElementById("emailMsg")
+                emailMsg.innerHTML=""
+                emailMsg.innerHTML="email length should be greater than 8 and less than 25"
+               emailMsg.style.color="red"
+            }
+            else{
+            id = id + 1;
+            data.push([id, name, email, phone])
+            clearFeilds();
+            display();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h1>Employee Details</h1>
+        <p>Enter Name:</p><input type="text" placeholder="Name" id="Name">
+        <span id="nameMsg"></span>
+        <p>Email:</p><input type="email" placeholder="email" id="Email" onblur="onSubmit()" onkeydown="onSubmit()">
+        <span id="emailMsg"></span>
+        <p> Phone No</p><input type="number" placeholder="Phone No" id="Phone">
+        <p><button onclick="onSubmit()">Submit</button></p>
+    </div>
+
+    <div>
+        <h2>Employee Details</h2>
+        <table id="tbl" border="1" style="width: 50%;">
+            <tbody>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone No</th>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+
+</html>

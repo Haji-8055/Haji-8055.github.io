@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+
+    <script>
+
+        let arr =[1,2,3]
+
+        console.log(arr);
+        document.write(arr)
+
+        for (let index = 0; index < arr.length; index++) {
+            const element = arr[index];
+
+            console.log(element);
+        }
+        //ways to create object in javascript
+
+        //builtin object creation 
+        console.log('builtin object creation ');
+        employee= new Object()
+
+        employee.firstName='raj'
+
+        console.log(employee.firstName);
+
+
+
+        //user defined way of creating object
+        console.log('user defined way of creating object');
+
+        function student (name,id,city){
+
+
+            this.name=name
+            this.id=id
+            this.city=city
+        }
+
+        let ram =new student("ram",1,"bangalore")
+
+        console.log(ram.name);
+        console.log(ram.id);
+        console.log(ram.city);
+
+
+        function displayDateOnClick(){
+            let date= new Date()
+            console.log(date);
+            console.log(date.getTime());
+            document.getElementById("date").innerHTML=date
+        }
+    </script>
+</head>
+<body>
+
+
+    <button onclick="displayDateOnClick()">get date</button>
+    <div id="date"></div>
+    
+</body>
+</html>

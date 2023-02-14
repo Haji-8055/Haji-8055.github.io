@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic image</title>
+
+    <script>
+
+        function displayImage() {
+
+            for (let index = 0; index < 10; index++) {
+
+                let image = document.createElement("img")
+                image.src = "wp1859208.jpg"
+                image.style.width = "60%"
+                // document.body.appendChild(image)
+                let img1 = document.getElementById("img1")
+
+                img1.appendChild(image)
+
+
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <button onclick="displayImage()">display Image </button>
+    <div id="img1"></div>
+
+</body>
+
+</html>
