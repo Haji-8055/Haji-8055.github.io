@@ -25,8 +25,8 @@
         function get_television() {
            var a= fetch('http://localhost:8083/dailyTask/readAll');
            console.log("fetch "+a);
-            fetch('http://localhost:8083/dailyTask/readAll')
-            .then(response => {
+         
+            a.then(response => {
                 return response.json();
             })
             .then(data => {data.forEach(element => { console.log(element.image);
